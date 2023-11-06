@@ -1,8 +1,9 @@
 from injector import inject
 from sqlalchemy.orm.session import Session 
 from data_access.DTOs.user_dto import UserDto
+from data_access.repositories.abstract_users_repository import AbstractUsersRepository
 
-class UsersRepository:
+class UsersRepository(AbstractUsersRepository):
     @inject
     def __init__(self, session: Session):
         self.session = session

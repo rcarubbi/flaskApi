@@ -1,10 +1,10 @@
 from injector import inject
-from data_access.repositories.users_repository import UsersRepository
-from domain.entities.user import User
+from app.data_access.repositories.abstract_users_repository  import AbstractUsersRepository
+from app.domain.entities.user import User
 
 class UsersService:
     @inject
-    def __init__(self, repository: UsersRepository):
+    def __init__(self, repository: AbstractUsersRepository):
         self.repository = repository
 
     def getAll(self):
