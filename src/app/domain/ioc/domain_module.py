@@ -1,5 +1,5 @@
 from injector import Module, Binder
-from domain.services.users_service import UsersService
+from app.domain.services.users_service import UsersService
 
 class DomainModule(Module):
     def configure(self, binder: Binder):

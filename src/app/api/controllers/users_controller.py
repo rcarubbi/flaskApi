@@ -1,5 +1,5 @@
 from injector import inject
-from domain.services.users_service import UsersService
+from app.domain.services.users_service import UsersService
 from flask import jsonify
 
 class UsersController:

@@ -1,5 +1,5 @@
 from sqlalchemy import Column, Integer, String
-from data_access.ioc.sql_module import Base
+from app.data_access.ioc.sql_module import Base
 
 class UserDto(Base):
     __tablename__ = 'users'

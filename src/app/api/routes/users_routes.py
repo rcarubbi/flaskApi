@@ -1,6 +1,6 @@
 from flask import Blueprint
 from injector import inject
-from api.controllers.users_controller import UsersController
+from app.api.controllers.users_controller import UsersController
 
 users_blueprint = Blueprint('users', __name__)
 
