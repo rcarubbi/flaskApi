@@ -8,6 +8,12 @@ class UsersService:
         self.repository = repository
 
     def getAll(self):
-        users_dto = self.repository.getAll()
-        users = [User(user_dto.user_id, user_dto.name) for user_dto in users_dto]
-        return users
+        return self.repository.getAll()
+
+        
+    def getById(self, id):
+        users = self.repository.getAll()
+        user = next((user for user in users if user.id == id), None)
+        return user
+    
+       
